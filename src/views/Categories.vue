@@ -4,11 +4,11 @@
       <h3>Категории</h3>
     </div>
     <section>
-      <Loader v-if="loading" />
+      <Loader v-if="loading"/>
       <div class="row" v-else>
         <CategoryCreate @created="addNewCategory" />
 
-        <CategoryEdit 
+        <CategoryEdit
           v-if="categories.length"
           :categories="categories"
           :key="categories.length + updateCount"
@@ -51,4 +51,3 @@ export default {
   }
 }
 </script>
-
